@@ -11,7 +11,7 @@ set linespace=0
 
 syntax on 
 
-colorscheme darkblue
+colorscheme dessert
 
 set ignorecase
 set smartcase
@@ -42,7 +42,7 @@ if exists('&colorcolumn')
     set colorcolumn=+1
 endif
 
-"call pathogen#runtime_append_all_bundles()
+call pathogen#runtime_append_all_bundles()
 
 filetype on
 
