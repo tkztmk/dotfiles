@@ -11,7 +11,8 @@ set linespace=0
 
 syntax on 
 
-colorscheme darkblue
+call pathogen#runtime_append_all_bundles()
+colorscheme xoria256
 
 set ignorecase
 set smartcase
@@ -42,7 +43,6 @@ if exists('&colorcolumn')
     set colorcolumn=+1
 endif
 
-call pathogen#runtime_append_all_bundles()
 
 filetype on
 
