@@ -11,7 +11,7 @@ set linespace=0
 
 syntax on 
 
-colorscheme dessert
+colorscheme darkblue
 
 set ignorecase
 set smartcase
