@@ -22,10 +22,13 @@ set showmatch
 set backspace=indent,eol,start
 
 set tabstop=4
+set softtabstop=4
 set expandtab
 set smarttab
 set shiftround
 set nowrap
+
+set list
 
 set backup
 set backupdir=~/vim_backup
