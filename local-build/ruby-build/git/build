@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+set -e 
+set -u 
+_gitroot=git://github.com/sstephenson/ruby-build.git
+_gitname=ruby-build
+pkgdir=$HOME/local/ruby-build/git
+if [ -d $_gitname/.git ] ; then 
+  cd $_gitname
+  if [ -z $( git branch -v | grep anongit ) ] ; then
+    git remote set-url origin $_gitroot
+  fi
+  git pull origin
+  cd ..
+else
+  git clone $_gitroot $_gitname
+fi
+mkdir -p $pkgdir/bin
+mkdir -p $pkgdir/share/ruby-build
+cp $_gitname/bin/* $pkgdir/bin
+cp $_gitname/share/ruby-build/* $pkgdir/share/ruby-build
+
+
