@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+pkgver=7.3.600
+wget -SN ftp://ftp.archlinux.org/other/vim/vim-${pkgver}.tar.xz
+tar -xJf vim-${pkgver}.tar.xz
+cd vim-${pkgver}/src
+autoconf
+CFLAGS='-O1' ./configure --prefix=$HOME/local/vim/7.3 \
+        --with-features=big --with-compiledby='Takezoe Tomoaki' \
+        --enable-gpm --enable-acl --with-x=no --disable-gui --enable-multibyte \
+        --enable-cscope --disable-netbeans --disable-perlinterp \
+        --disable-pythoninterp --disable-python3interp --disable-rubyinterp \
+        --disable-luainterp
+make -j1
+make install
+
