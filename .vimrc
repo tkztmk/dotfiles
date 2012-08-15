@@ -1,3 +1,4 @@
+set encoding=utf-8
 filetype plugin indent on
 
 set nocompatible 
@@ -22,14 +23,13 @@ set autoindent
 set showmatch
 set backspace=indent,eol,start
 
-set tabstop=4
-set softtabstop=4
+set tabstop=8
+set shiftwidth=2
 set expandtab
-set smarttab
-set shiftround
-set nowrap
 
 set list
+"set listchars="tab:─,eol:eol⏎"
+set listchars=tab:▸\ ,eol:¬
 
 set backup
 set backupdir=~/vim_backup
@@ -40,7 +40,7 @@ set directory=~/vim_swap
 
 set textwidth=80
 if exists('&colorcolumn')
-    set colorcolumn=+1
+  set colorcolumn=+1
 endif
 
 
