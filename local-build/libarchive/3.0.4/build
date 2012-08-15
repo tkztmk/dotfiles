@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+pkgver=3.0.4
+wget -SN \
+  https://github.com/downloads/libarchive/libarchive/libarchive-${pkgver}.tar.gz
+tar -xzf libarchive-${pkgver}.tar.gz
+cd libarchive-${pkgver}
+./configure --prefix=$HOME/local/libarchive/${pkgver}/ --without-xml2
+make -j1
+make check
+make install
+install -D -m644 COPYING\
+  $HOME/local/libarchive/${pkgver}/usr/share/licenses/libarchive/COPYING
+
