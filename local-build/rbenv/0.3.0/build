@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+set -e 
+set -u 
+pkgver=0.3.0
+pkgname=rbenv
+pkgdir=$HOME/local/$pkgname/$pkgver
+wget -N https://github.com/sstephenson/rbenv/tarball/v${pkgver}
+mkdir -p src
+cd src
+bsdtar --strip-components 1 -xf ../v${pkgver}
+mkdir -p $pkgdir/bin
+mkdir -p $pkgdir/share/doc/$pkgname
+mkdir -p $pkgdir/share/licenses/$pkgname
+mkdir -p $pkgdir/share/rbenv/completions
+mkdir -p $pkgdir/share/rbenv/libexec
+
+install -m 644 ./README.md $pkgdir/share/doc/$pkgname
+install -m 644 ./LICENSE $pkgdir/share/licenses/$pkgname
+install -m 644 ./completions/* $pkgdir/share/rbenv/completions/
+install -m 755 ./libexec/* $pkgdir/share/rbenv/libexec/
+
+if [ -e $pkgdir/bin/rbenv ] ; then 
+  rm $pkgdir/bin/rbenv
+fi
+ln -s $pkgdir/share/rbenv/libexec/rbenv $pkgdir/bin/
+
