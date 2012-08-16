@@ -2,7 +2,12 @@
 export EDITOR=vim
 export TERM=xterm-256color
 export LANG=en_US.utf8
-. /usr/share/doc/git-*/contrib/completion/git-completion.bash
+for s in $(find $(find /usr/share/doc -maxdepth 1 -name git-*) /usr/share/git \
+  -name git-completion.bash); do
+  . $s
+done
+
+
 eval "$(rbenv init -)"
 . ~/local/add-path.sh
 hash -r
