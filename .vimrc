@@ -1,5 +1,4 @@
 set encoding=utf-8
-filetype plugin indent on
 
 set nocompatible 
 set number
@@ -12,7 +11,12 @@ set linespace=0
 
 syntax on 
 
+filetype off
 call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+set helpfile=$VIMRUNTIME/doc/help.txt
+filetype plugin indent on
+
 colorscheme xoria256
 
 set ignorecase
@@ -42,8 +46,4 @@ set textwidth=80
 if exists('&colorcolumn')
   set colorcolumn=+1
 endif
-
-
-filetype on
-
 
