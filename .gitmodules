@@ -13,3 +13,6 @@
 [submodule ".vim/bundle/cpp"]
 	path = .vim/bundle/cpp
 	url = https://github.com/vim-jp/cpp-vim.git
+[submodule ".vim/bundle/haxe"]
+	path = .vim/bundle/haxe
+	url = https://github.com/MarcWeber/vim-haxe.git
