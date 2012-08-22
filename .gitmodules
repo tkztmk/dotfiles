@@ -16,3 +16,6 @@
 [submodule ".vim/bundle/haxe"]
 	path = .vim/bundle/haxe
 	url = https://github.com/MarcWeber/vim-haxe.git
+[submodule ".vim/bundle/less"]
+	path = .vim/bundle/less
+	url = https://github.com/groenewege/vim-less.git
