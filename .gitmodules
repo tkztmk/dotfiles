@@ -16,3 +16,6 @@
 [submodule ".vim/bundle/less"]
 	path = .vim/bundle/less
 	url = https://github.com/groenewege/vim-less.git
+[submodule ".vim/bundle/vaxe"]
+	path = .vim/bundle/vaxe
+	url = https://github.com/jdonaldson/vaxe.git
