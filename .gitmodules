@@ -19,3 +19,6 @@
 [submodule ".vim/bundle/vaxe"]
 	path = .vim/bundle/vaxe
 	url = https://github.com/jdonaldson/vaxe.git
+[submodule ".vim/bundle/powerline"]
+	path = .vim/bundle/powerline
+	url = https://github.com/jdonaldson/vim-powerline.git
