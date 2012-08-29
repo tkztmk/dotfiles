@@ -4,32 +4,33 @@
 autoload -U compinit
 compinit
 
-# antigen settings
+# antigen loading settings
 
-source ~/.zsh/antigen/antigen.zsh
+# global variable '$antigen_bundles_array' 
+tkztmk_antigen_bundles=()
 
-antigen-lib
+# global variable '$antigen_theme'
+tkztmk_antigen_theme=bira
 
-oh_my_zsh_plugins=(
-  archlinux bundler gem 
-  #git # use git-completion.bash
-  github gnu-utils heroku jake-node jruby mercurial mvn node npm perl pip 
-  python rails3 rake rbenv ruby svn vi-mode yum)
+reload-antigen(){
+  source ~/.zsh/antigen/antigen.zsh
+  antigen-lib
+  for bundle in $tkztmk_antigen_bundles; do
+    antigen-bundle "$bundle"
+  done
+  antigen-theme "$tkztmk_antigen_theme"
+  antigen-apply
+}
 
-for p in "${oh_my_zsh_plugins[@]}"; do
-  antigen-bundle "$p"
-done
+load-antigen-groups(){
+  for group in "$@"; do
+    source "$HOME/script/zsh/antigen/group/$group.zsh"
+  done
+  reload-antigen
+}
 
-zsh_users_plugins=(
-  zsh-completions zsh-syntax-highlighting)
-
-for p in "${zsh_users_plugins[@]}"; do
-  antigen-bundle "zsh-users/$p"
-done
-
-antigen-theme bira 
-
-antigen-apply
+# load default groups
+load-antigen-groups vi
 
 # add ~/.zsh/site-functions to fpath
 
