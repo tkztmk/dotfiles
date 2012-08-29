@@ -30,7 +30,7 @@ load-antigen-groups(){
 }
 
 # load default groups
-load-antigen-groups vi
+load-antigen-groups base vi
 
 # add ~/.zsh/site-functions to fpath
 
