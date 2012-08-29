@@ -11,10 +11,10 @@ source ~/.zsh/antigen/antigen.zsh
 antigen-lib
 
 oh_my_zsh_plugins=(
-  'archlinux' 'bundler' 'gem' 'git' 'github' 'gnu-utils' 
-  'heroku' 'jake-node' 'jruby' 'mercurial' 'mvn' 
-  'node' 'npm' 'perl' 'pip' 'python' 'rails3' 'rake' 'rbenv' 'ruby' 'svn' 
-  'vi-mode' 'yum')
+  archlinux bundler gem 
+  #git # use git-completion.bash
+  github gnu-utils heroku jake-node jruby mercurial mvn node npm perl pip 
+  python rails3 rake rbenv ruby svn vi-mode yum)
 
 for p in "${oh_my_zsh_plugins[@]}"; do
   antigen-bundle "$p"
@@ -41,4 +41,9 @@ bindkey -v
 bindkey "^P" up-line-or-history
 bindkey "^N" down-line-or-hisoty
 
+# load git completion. 
+
+autoload bashcompinit
+bashcompinit
+source ~/repo/external/git/contrib/completion/git-completion.bash
 
