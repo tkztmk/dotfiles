@@ -32,7 +32,7 @@ load-antigen-groups(){
 }
 
 # history settings. 
-HISTFILE=~/.zsh/hisotory/HISTFILE
+HISTFILE=~/.zsh/history/HISTFILE
 HISTSIZE=$tkztmk_large_num
 SAVEHIST=$tkztmk_large_num
 setopt share_history
