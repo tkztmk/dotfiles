@@ -1,3 +1,5 @@
+# Constants
+tkztmk_large_num=4294967296
 
 # initialize completion
 
@@ -29,8 +31,12 @@ load-antigen-groups(){
   reload-antigen
 }
 
-# load default groups
-load-antigen-groups base vi
+# history settings. 
+HISTFILE=~/.zsh/hisotory/HISTFILE
+HISTSIZE=$tkztmk_large_num
+SAVEHIST=$tkztmk_large_num
+setopt share_history
+
 
 # add ~/.zsh/site-functions to fpath
 
@@ -58,5 +64,7 @@ hash -r
 eval "$(rbenv init -)"
 source ~/.rbenv/completions/rbenv.zsh
 
-
+# load default groups
+# better to be loaded last! 
+load-antigen-groups base vi
 
