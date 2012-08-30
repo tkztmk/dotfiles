@@ -5,5 +5,5 @@ Session.vim
 .netrwhistO
 
 # tkztmk/dotfiles
-/.zsh/hisotory
+/.zsh/hisotory/HISTFILE
 
