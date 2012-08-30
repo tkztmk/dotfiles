@@ -48,3 +48,15 @@ autoload bashcompinit
 bashcompinit
 source ~/repo/external/git/contrib/completion/git-completion.bash
 
+export EDITOR=vim
+export TERM=xterm-256color
+export LANG=en_US.utf8
+
+source ~/local/add-path.sh
+hash -r
+
+eval "$(rbenv init -)"
+source ~/.rbenv/completions/rbenv.zsh
+
+
+
