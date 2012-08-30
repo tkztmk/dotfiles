@@ -62,7 +62,6 @@ source ~/local/add-path.sh
 hash -r
 
 eval "$(rbenv init -)"
-source ~/.rbenv/completions/rbenv.zsh
 
 # load default groups
 # better to be loaded last! 
