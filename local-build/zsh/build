@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+set -u 
+set -e
+pkgname=zsh
+pkgver=5.0.0
+_tarname=$pkgname-$pkgver
+if [ ! -e $_tarname.tar.bz2 ] ; then
+  wget "ftp://ftp.zsh.org/pub/${pkgname}-${pkgver}.tar.bz2"
+  bsdtar -xf $pkgname-$pkgver.tar.bz2
+fi
+cd "${pkgname}-${pkgver}"
+
+rm -rf Completion/{AIX,BSD,Cygwin,Darwin,Debian,Mandriva,openSUSE,Solaris}
+rm -f  Completion/Linux/Command/_{pkgtool,yast}
+rm -f  Completion/Unix/Command/_osc
+
+./configure --prefix=$HOME/local/$pkgname \
+  --enable-multibyte \
+  --enable-function-subdirs \
+  --with-tcsetpgrp \
+  --enable-pcre \
+  --enable-cap \
+  --enable-zsh-secure-free
+make
+HOME=$(pwd) make check
+make install
+
