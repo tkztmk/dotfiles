@@ -1,7 +1,7 @@
 # basic plugins. probably loaded by default. 
 
 tkztmk_antigen_bundles+=(
-  gnu-utils
+  gnu-utils git
   )
 
 local zsh_users_plugins
