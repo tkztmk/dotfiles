@@ -45,8 +45,10 @@ fpath=(~/.zsh/site-functions $fpath)
 # we should use the vi keybind, shouldn't we? 
 
 bindkey -v 
-bindkey "^P" up-line-or-history
-bindkey "^N" down-line-or-hisoty
+bindkey "$terminfo[kcuu1]" up-line-or-history
+bindkey "$terminfo[kcud1]" down-line-or-hisoty
+bindkey "$terminfo[khome]" beginning-of-line
+bindkey "$terminfo[kend]" end-of-line
 
 export EDITOR=vim
 export TERM=xterm-256color
