@@ -1,3 +1,7 @@
 #!/usr/bin/env bash
 rsync -avcHSXAC ./ ~/
 
+# rebuild vimproc native library
+cd ~/.vim/bundle/vimproc
+make -f make_unix.mak
+
