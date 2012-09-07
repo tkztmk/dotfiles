@@ -9,7 +9,7 @@
 	url = https://github.com/bbommarito/vim-slim.git
 [submodule ".vim/bundle/vala"]
 	path = .vim/bundle/vala
-	url = https://github.com/rainux/vim-vala.git
+	url = https://github.com/tkztmk/vim-vala.git
 [submodule ".vim/bundle/cpp"]
 	path = .vim/bundle/cpp
 	url = https://github.com/vim-jp/cpp-vim.git
