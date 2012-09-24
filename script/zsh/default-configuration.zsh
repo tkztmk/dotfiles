@@ -63,5 +63,5 @@ eval "$(rbenv init - zsh)"
 # better to be loaded last! 
 load-antigen-groups base vi
 
-source script/zsh/util.zsh
+source $HOME/script/zsh/util.zsh
 
