@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
 
 if [[ -d vim ]]; then
-  cd vim
-  hg pull -u
+  (cd vim && hg pull -u)
 else
   hg clone https://tkztmk@bitbucket.org/tkztmk/vim
-  cd vim
 fi
 rm -Rf vim-build
 cp -R vim vim-build
