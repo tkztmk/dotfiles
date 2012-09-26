@@ -5,6 +5,7 @@ if [[ -d vim ]]; then
   hg pull -u
 else
   hg clone https://tkztmk@bitbucket.org/tkztmk/vim
+  cd vim
 fi
 rm -Rf vim-build
 cp -R vim vim-build
