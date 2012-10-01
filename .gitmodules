@@ -43,3 +43,6 @@
 [submodule ".vim/bundle/vimproc"]
 	path = .vim/bundle/vimproc
 	url = https://github.com/Shougo/vimproc.git
+[submodule ".vim/bundle/omake"]
+	path = .vim/bundle/omake
+	url = https://github.com/tkztmk/vim-omake.git
