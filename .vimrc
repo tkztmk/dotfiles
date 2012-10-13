@@ -66,4 +66,8 @@ let g:neocomplcache_min_syntax_length = 3
 " let g:neocomplcache_dictionary_filetype_lists =
 " let g:neocomplcache_keyword_patterns
 let g:neocomplcache_clang_use_library = 1
+if !exists('g:neocomplcache_omni_patterns')
+  let g:neocomplcache_omni_patterns = {}
+endif
+
 
