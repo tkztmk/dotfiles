@@ -55,3 +55,6 @@
 [submodule ".vim/bundle/javascript-syntax"]
 	path = .vim/bundle/javascript-syntax
 	url = https://github.com/jelera/vim-javascript-syntax.git
+[submodule ".vim/bundle/neocomplcache-clang"]
+	path = .vim/bundle/neocomplcache-clang
+	url = https://github.com/Shougo/neocomplcache-clang.git

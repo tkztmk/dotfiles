@@ -55,3 +55,15 @@ let g:syntastic_auto_loc_list = 1
 " gjslint. install closure-linter on Arch Linux. 
 let g:syntastic_javascript_checker = 'gjslint'
 
+" neocomplcache
+let g:acp_enableAtStartup = 0
+let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_smart_case = 1
+let g:neocomplcache_enable_camel_case_completion = 1
+let g:neocomplcache_enable_underbar_completion = 1
+let g:neocomplcache_min_syntax_length = 3
+" let g:neocomplcache_lock_buffer_name_pattern =
+" let g:neocomplcache_dictionary_filetype_lists =
+" let g:neocomplcache_keyword_patterns
+let g:neocomplcache_clang_use_library = 1
+
