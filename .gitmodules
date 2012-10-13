@@ -58,3 +58,6 @@
 [submodule ".vim/bundle/neocomplcache-clang"]
 	path = .vim/bundle/neocomplcache-clang
 	url = https://github.com/Shougo/neocomplcache-clang.git
+[submodule ".vim/bundle/neocomplcache-snippets-complete"]
+	path = .vim/bundle/neocomplcache-snippets-complete
+	url = https://github.com/Shougo/neocomplcache-snippets-complete.git
