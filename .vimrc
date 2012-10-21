@@ -75,7 +75,7 @@ inoremap <expr><C-g> neocomplcache#undo_completion()
 inoremap <expr><C-l> neocomplcache#complete_common_string()
 inoremap <expr><CR> neocomplcache#smart_close_popup() . "\<CR>"
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-inoremap <expr><BS> neocomplcache#smart_close_popup()
+" inoremap <expr><BS> neocomplcache#smart_close_popup()
 inoremap <expr><C-y> neocomplcache#close_popup()
 inoremap <expr><C-e> neocomplcache#cancel_popup()
 
