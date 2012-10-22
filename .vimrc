@@ -17,7 +17,9 @@ call pathogen#helptags()
 set helpfile=$VIMRUNTIME/doc/help.txt
 filetype plugin indent on
 
-colorscheme xoria256
+"let g:solarized_termcolors=256
+set background=dark
+colorscheme solarized
 
 set ignorecase
 set smartcase
